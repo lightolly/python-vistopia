@@ -3,3 +3,6 @@ mutagen
 click
 tabulate
 wcwidth
+pdfkit
+m3u8
+ffmpeg-python
