@@ -108,7 +108,7 @@ class Visitor:
                     f.write(f"file '{(folder / Path(ts).name).absolute()}'\n".encode())
             # 使用ffmpeg合并ts文件, 生成mp4文件
             (ffmpeg.input(folder / 'filelist.txt', format='concat', safe=0)
-             .output(filename=fname, codec='copy', loglevel='quite').run())
+             .output(filename=fname, codec='copy', loglevel='quiet').run())
             logger.info(f"-->合并完成 {fname} 文件")
             # 删除临时文件
             for ts in ts_list:
