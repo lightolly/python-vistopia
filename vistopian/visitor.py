@@ -68,7 +68,7 @@ class Visitor:
 
         def download(url: str, fname: Path):
             import socket
-            socket.setdefaulttimeout(30)
+            socket.setdefaulttimeout(60)
             try:
                 urlretrieve(url, fname)
             except socket.timeout:
